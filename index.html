@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    
+    <!-- Favicon - Heart Icon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='90'>❤️</text></svg>">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Playfair Display (elegant) + Poppins (modern) + Dancing Script (romantic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        /* ===== Root Colors & Fonts ===== */
+        :root {
+            --primary-pink: #ff69b4;
+            --primary-red: #e91e63;
+            --light-pink: #ffb6c1;
+            --lighter-pink: #ffe4e9;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition-smooth: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 50%, #e91e63 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            color: var(--white);
+        }
+
+        /* Animated floating hearts background */
+        .heart-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: float-up 6s ease-in infinite;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            animation: fade-in 1s ease-in;
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: slide-down 0.8s ease-out;
+        }
+
+        .hero-quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            animation: slide-up 0.8s ease-out 0.2s backwards;
+        }
+
+        /* Large animated heart icon in hero */
+        .heart-icon-large {
+            font-size: 5rem;
+            margin: 2rem 0;
+            animation: heartbeat 1.2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            14% {
+                transform: scale(1.2);
+            }
+            28% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-down {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* ===== LOVE MESSAGE SECTION ===== */
+        .love-message-section {
+            padding: 5rem 2rem;
+            background-color: var(--lighter-pink);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .message-card {
+            max-width: 600px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+            border-top: 5px solid var(--primary-pink);
+            animation: slide-in-card 0.8s ease-out;
+        }
+
+        @keyframes slide-in-card {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .message-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .message-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: center;
+            font-weight: 300;
+        }
+
+        /* ===== REASONS / MEMORIES SECTION ===== */
+        .reasons-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--lighter-pink) 0%, var(--white) 100%);
+            min-height: auto;
+        }
+
+        .reasons-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--primary-red);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            animation: fade-in 0.8s ease-in;
+        }
+
+        .reason-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 2rem;
+            transition: var(--transition-smooth);
+            border: 2px solid transparent;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-pink);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2);
+        }
+
+        .reason-heart {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            animation: heartbeat 1.2s ease-in-out infinite;
+        }
+
+        .reason-card h5 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .reason-card p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ===== SURPRISE SECTION ===== */
+        .surprise-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--lighter-pink) 100%);
+            text-align: center;
+            min-height: auto;
+        }
+
+        .surprise-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .surprise-btn {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-red) 100%);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(233, 30, 99, 0.3);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .surprise-btn:active {
+            transform: scale(0.98);
+        }
+
+        .surprise-message {
+            display: none;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            animation: pop-in 0.5s ease-out;
+        }
+
+        @keyframes pop-in {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .surprise-message.show {
+            display: block;
+        }
+
+        .surprise-message h3 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary-red);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .surprise-message p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: fixed;
+            pointer-events: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Flower Animation */
+        .flower {
+            position: fixed;
+            pointer-events: none;
+            font-size: 2.5rem;
+            animation: flower-fall 3s ease-out forwards;
+            z-index: 1000;
+        }
+
+        @keyframes flower-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ===== FOOTER SECTION ===== */
+        .footer-section {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-pink) 100%);
+            color: var(--white);
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .footer-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-signature {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .footer-hearts {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+
+            .hero-quote {
+                font-size: 1.3rem;
+            }
+
+            .heart-icon-large {
+                font-size: 3rem;
+            }
+
+            .reasons-title {
+                font-size: 2rem;
+            }
+
+            .message-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .surprise-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-message {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* ===== SMOOTH SCROLL BEHAVIOR ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="hero">
+        <!-- Background floating hearts -->
+        <div class="heart-background" id="heartBackground"></div>
+        
+        <!-- Main Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-headline">Happy Valentine's Day ❤️</h1>
+            <p class="heart-icon-large">💕</p>
+            <p class="hero-quote">Because who needs a date when you have amazing friends like you? 😎</p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down" style="color: white; font-size: 2rem;"></i>
+        </div>
+    </section>
+
+    <!-- ===== LOVE MESSAGE SECTION ===== -->
+    <section class="love-message-section" id="message">
+        <div class="message-card">
+            <h2>A Message for You</h2>
+            <p>
+                I'm so grateful to have you in my life. Your friendship means the world to me, 
+                and the moments we share together are some of my most cherished memories. 
+                <br><br>
+                Thank you for being such an amazing friend. Whether we're laughing together, supporting each other through tough times, 
+                or just enjoying each other's company, you make my life so much better. On this Valentine's Day, I want to celebrate 
+                you and all the wonderful people like you in my life.
+                <br><br>
+                <strong>Your favorite (don't deny it) friend 😉</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== REASONS / MEMORIES SECTION ===== -->
+    <section class="reasons-section" id="reasons">
+        <div class="container">
+            <h2 class="reasons-title">Why You're Pretty Cool (I Guess) 😏</h2>
+            <div class="row g-4">
+                <!-- Reason 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">😊</div>
+                        <h5>Your Hilarious Weirdness</h5>
+                        <p>You're not weird, you're a limited edition! Your unique brand of crazy makes life so much more entertaining. Never change! 🤪</p>
+                    </div>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">❤️</div>
+                        <h5>You Tolerate Me</h5>
+                        <p>Let's be honest, putting up with me is no easy task. But you do it with grace... and lots of eye rolls. I appreciate it! 😂</p>
+                    </div>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">🎭</div>
+                        <h5>Your Laugh (Even if it's Weird)</h5>
+                        <p>Your laugh is contagious... like a really fun disease! Whether it's a giggle or a full snort, it makes everything better. 🤣</p>
+                    </div>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">🌟</div>
+                        <h5>You're My Partner in Crime</h5>
+                        <p>From spontaneous adventures to terrible decisions, you're always there. We might not be smart, but we're fun! 😎</p>
+                    </div>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">💫</div>
+                        <h5>You Get My References</h5>
+                        <p>From memes to movie quotes, we speak the same language. Finding someone who gets your humor? Priceless! 🎬</p>
+                    </div>
+                </div>
+
+                <!-- Reason 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="reason-card">
+                        <div class="reason-heart">🎁</div>
+                        <h5>You're Just... You!</h5>
+                        <p>No matter how weird, dramatic, or chaotic things get, you're authentically YOU. And that's pretty dang cool! 🔥</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SURPRISE SECTION ===== -->
+    <section class="surprise-section" id="surprise">
+        <div class="container">
+            <h2 class="surprise-title">One More Thing... 💖</h2>
+            <button class="surprise-btn" id="surpriseBtn">Click for a Surprise 💖</button>
+            
+            <!-- Hidden surprise message -->
+            <div class="surprise-message" id="surpriseMessage">
+                <h3>✨ Congratulations! ✨</h3>
+                <p>
+                    You thought this was just a cute website, but SURPRISE! It's actually a legally binding contract 
+                    that says we're best friends forever. Sorry, you clicked the button, no take-backsies! 😜
+                    <br><br>
+                    On a real note though—you're genuinely amazing and I'm glad we're friends. Life's way better 
+                    with people like you in it. Thanks for being you!
+                    <br><br>
+                    Happy Valentine's Day, rockstar! 🎸💕
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer class="footer-section" id="footer">
+        <p class="footer-message">Stay Awesome! 🚀</p>
+        <div class="footer-hearts">❤️ 💕 ❤️</div>
+        <p class="footer-signature">Your friend who made you a whole website 😎</p>
+        <p class="footer-signature" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Happy Valentine's Day • February 14, 2026</p>
+        <p class="footer-signature" style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Zakariyas The Great</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // ===== CREATE FLOATING HEARTS ON PAGE LOAD =====
+        function createFloatingHearts() {
+            const heartBackground = document.getElementById('heartBackground');
+            const hearts = ['❤️', '💕', '💖', '💗', '💝'];
+            
+            // Create 15 random floating hearts
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                heartBackground.appendChild(heart);
+            }
+        }
+
+        // ===== SURPRISE BUTTON CLICK HANDLER =====
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            const surpriseMessage = document.getElementById('surpriseMessage');
+            surpriseMessage.classList.toggle('show');
+            
+            // Create confetti effect
+            if (surpriseMessage.classList.contains('show')) {
+                createConfetti();
+            }
+        });
+
+        // ===== CONFETTI ANIMATION FUNCTION =====
+        function createConfetti() {
+            const colors = ['#ff69b4', '#e91e63', '#ffb6c1', '#ff1493'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (2 + Math.random() * 1) + 's';
+                confetti.style.animationDelay = Math.random() * 0.2 + 's';
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation ends
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+        }
+
+        // ===== FLOWERS ANIMATION FUNCTION =====
+        function createFlowers() {
+            const flowers = ['🌹', '🌺', '🌸', '🌼', '🌻', '💐', '🌷'];
+            const flowerCount = 30;
+            
+            for (let i = 0; i < flowerCount; i++) {
+                const flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.animationDuration = (2.5 + Math.random() * 1) + 's';
+                flower.style.animationDelay = Math.random() * 0.3 + 's';
+                document.body.appendChild(flower);
+                
+                // Remove flower after animation ends
+                setTimeout(() => {
+                    flower.remove();
+                }, 3500);
+            }
+        }
+
+        // ===== SMOOTH SCROLL WITH OFFSET (for better UX) =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== FADE-IN ANIMATION ON SCROLL =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animation = 'fade-in 0.8s ease-in';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all card elements for scroll animations
+        document.querySelectorAll('.reason-card, .message-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== INITIALIZE FLOATING HEARTS =====
+        window.addEventListener('load', createFloatingHearts);
+
+        // ===== ADD SCROLL EFFECT TO PAGE =====
+        window.addEventListener('scroll', function() {
+            // Optional: Add scroll effects here if needed
+        });
+
+        // ===== PREVENT SCROLLING WHEN HOVERING OVER HEARTS (keeps animation smooth) =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // All animations are set up and ready
+            console.log('Valentine\'s Day website loaded! ❤️');
+        });
+    </script>
+
+</body>
+</html>
